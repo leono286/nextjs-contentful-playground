@@ -12,21 +12,21 @@ const getNavbarLinks = async () => {
   return entries;
 };
 
-const logoSrc = "https://media.licdn.com/dms/image/v2/C4E0BAQGTSDC7-5XmhQ/company-logo_200_200/company-logo_200_200/0/1630617093977?e=2147483647&v=beta&t=nEiBV9IZRynSGGq61NG8-yJwa41BRiOXbrzvINQO9ck"
-
+const getNavbarLogo = async () => {
+  const entries = await client.getEntries({content_type: "navBarLogo"})
+  return entries;
+}
 
 export default async function Home() {
-  
+  const resLogo = await getNavbarLogo();
   const response = await getNavbarLinks();
-
-  console.log(response);
   
   const navBarLinks = response.items[0].fields.linksArray
-  
+  const navBarLogo = resLogo.items[0].fields.navBarLogo.fields.file
 
   return (
     <div className={styles.page}>
-      <Navbar img={logoSrc} links={navBarLinks} />
+      <Navbar img={navBarLogo} links={navBarLinks} />
     </div>
   );
 }
