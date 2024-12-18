@@ -2,10 +2,7 @@ import styles from "./Navbar.module.css"
 import Image from "next/image";
 
 function Navbar(props) {
-  const { img, links } = props;
-
-  console.log(img);
-  
+  const { img, links } = props;  
 
   return (
   <nav className={styles.navbar}>
