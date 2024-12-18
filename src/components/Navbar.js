@@ -7,12 +7,13 @@ function Navbar(props) {
   console.log(img);
   
 
-  return (<nav className={styles.navbar}>
-    <Image 
+  return (
+  <nav className={styles.navbar}>
+    <Image className={styles.navbarLogo}
     src={"https:" + img.url} 
-    alt="logo impulsa"
-    width={img.details.image.width}
-    height ={img.details.image.height}
+    alt="logo impulsa" 
+    width={109.47}
+    height ={100}
     />
     <div className={styles.linksWrapper}>
       {links.map((link) => {

@@ -5,6 +5,14 @@
   background-color: #fff;
 }
 
+.navbarLogo {
+  width: 109.47px;
+  height: 100px;
+  top: 14px;
+  left: 71px;
+  
+}
+
 .linksWrapper {
   display: flex;
   align-items: center;
