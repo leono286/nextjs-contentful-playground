@@ -1,3 +1,4 @@
+import styles from "./heroSection.module.css"
 import Image from "next/image"
 
 export const HeroSection = (props) => { 
@@ -9,15 +10,15 @@ export const HeroSection = (props) => {
     console.log(link)
 
   return (
-    <div>      
-        <Image
+    <div className={styles.heroSection}>      
+        <Image className={styles.heroImg}
         src={"https:" + img.url}
         alt="Hero Section"
         width={1439}
         height ={570}
         />
-        <h1>{slogan}</h1>
-        <h5>{sloganDetail}</h5>
+        <h1 className={styles.slogan}>{slogan}</h1>
+        <h5 className={styles.sloganDetail}>{sloganDetail}</h5>
         <a href={href}>{text}</a>
     </div>
   )
