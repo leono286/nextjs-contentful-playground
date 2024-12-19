@@ -6,7 +6,7 @@
 }
 
 .heroImg {
-    width: 100%; 
+    width: 1439px; 
     height: 100%; 
     object-fit: cover; 
     position: absolute;
@@ -16,11 +16,28 @@
 .slogan {
     position: absolute;
     z-index: 2;
+    font-family: 'Zilla Slab', serif;
+    font-weight: 700;
+    font-size:  54px;
+    line-height: 55px ;
+    width: 511px;
+    height: 152px;
+    top: 115px;
+    left: 84px;
 }
 
 .sloganDetail {
     position: absolute;
     z-index: 2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size:  20px;
+    line-height: 30px ;
+    width: 405px;
+    height: 85px;
+    top: 303px;
+    left: 84px;
+    color: #fff;
 }
 
 .heroSection a {
