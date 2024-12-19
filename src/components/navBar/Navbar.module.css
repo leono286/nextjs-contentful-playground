@@ -32,3 +32,9 @@
   background-color: #e36414;
   color: #fff;
 }
+
+.ctaIcon {
+  width: 20px; /* Tamaño del ícono */
+  height: auto; /* Mantiene proporciones */
+  margin-right: 10px; /* Espaciado entre ícono y texto */
+}
