@@ -3,14 +3,14 @@
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
+  width:100%;
 }
 
 .navbarLogo {
   width: 109.47px;
   height: 100px;
   top: 14px;
-  left: 71px;
-  
+  left: 71px;  
 }
 
 .linksWrapper {
@@ -19,22 +19,49 @@
   gap: 40px;
 }
 
-.linksWrapper a {
-  border-radius: 48px;
+.linkNoCta {
   color: #0f4c5c;
-  padding: 13px 16px
 }
-.linksWrapper a:hover {
+.linkNoCta:hover {
   color: #787878;
 }
 
 .linkCta {
-  background-color: #e36414;
-  color: #fff;
+  border-radius: 48px;
+  padding: 13px 16px;
+  color: #ffff;
+  background-color: #e36414;  
+  display: inline-flex
 }
 
-.ctaIcon {
-  width: 20px; /* Tamaño del ícono */
-  height: auto; /* Mantiene proporciones */
-  margin-right: 10px; /* Espaciado entre ícono y texto */
+.linkCta img {
+  width: 20px;
+  height: auto; 
+  margin-right: 10px;
+  align-content: center;
+  filter:invert()
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center; /* Centra todos los elementos */
+  }
+
+  .navbarLogo {
+    margin-bottom: 20px; /* Espacio debajo del logo */
+    width: 60px;
+    height: auto;
+  }
+
+  .linksWrapper {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .linkCta {
+    width: 100%; /* Botones ocupan todo el ancho */
+    text-align: center;
+  }
 }

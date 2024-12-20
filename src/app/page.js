@@ -39,7 +39,7 @@ export default async function Home() {
   return (
     <div className={styles.page}>
       <Navbar img={navBarLogo} links={navBarLinks} />
-      <HeroSection img={heroImg} slogan={slogan} sloganDetail={sloganDetail} link ={heroLink} />
+      {/* <HeroSection img={heroImg} slogan={slogan} sloganDetail={sloganDetail} link ={heroLink} /> */}
     </div>
   );
 }

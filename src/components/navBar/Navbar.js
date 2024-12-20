@@ -17,12 +17,11 @@ function Navbar(props) {
         const text = link.fields.text;
         const href = link.fields.href;
         const isCta = link.fields.isCta;
-        return <a key={link.sys.id} className={isCta ? styles.linkCta : ""} href={href}>
+        return <a key={link.sys.id} className={isCta ? styles.linkCta : styles.linkNoCta} href={href}>
            {isCta && (
           <img 
             src="/icons/favorite.png" 
             alt="Ícono favorito" 
-            className={styles.ctaIcon} 
           />
         )}
           {text}
