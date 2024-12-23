@@ -49,6 +49,24 @@
   cursor: pointer;
 }
 
+.contentCTAMobile {
+  background-color: #e36414; 
+  border-radius: 48px;
+}
+
+.corazon{
+  display: none;
+  padding: 5px;
+  width: 32px;
+  height: 32px;
+  filter: invert(1) brightness(2);
+
+}
+
+
+
+
+
 @media (max-width: 768px) {
 
 
@@ -60,6 +78,10 @@
 
   .linksWrapper {
     display: none;
+  }
+
+  .corazon{
+    display: block;
   }
 
   .menuButton {

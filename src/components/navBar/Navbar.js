@@ -34,6 +34,13 @@ function Navbar(props) {
       height ={20.03}
       />
       </div>
+      <div className={styles.contentCTAMobile}>
+        <img className={styles.corazon}
+            src="/icons/favorite.png" 
+            alt="Corazon"
+          />
+      </div>
+      
 
 
     <div className={`${styles.linksWrapper} ${menuOpen ? styles.menuOpen : ''}`}>
