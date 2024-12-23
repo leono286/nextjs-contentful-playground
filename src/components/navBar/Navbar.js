@@ -1,13 +1,25 @@
+"use client";
 import styles from "./Navbar.module.css"
 import Image from "next/image";
-
-console.log(styles)
+import { useState } from "react";
 
 function Navbar(props) {
   const { logo, links , logoText} = props;  
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
 
   return (
   <nav className={styles.navbar}>
+
+    <img
+    className={styles.menuButton}
+    src="/icons/menu.png"
+    onClick={toggleMenu}
+    />
       <div className={styles.logoContent}>
       <Image
       src={`https:${logo.url}`}
@@ -24,7 +36,7 @@ function Navbar(props) {
       </div>
 
 
-    <div className={styles.linksWrapper}>
+    <div className={`${styles.linksWrapper} ${menuOpen ? styles.menuOpen : ''}`}>
       {links.map((link) => {
         const text = link.fields.text;
         const href = link.fields.href;
@@ -33,7 +45,7 @@ function Navbar(props) {
            {isCta && (
           <img 
             src="/icons/favorite.png" 
-            alt="Ícono favorito" 
+            alt="Corazon" 
           />
         )}
           {text}
