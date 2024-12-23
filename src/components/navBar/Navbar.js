@@ -1,17 +1,29 @@
 import styles from "./Navbar.module.css"
 import Image from "next/image";
 
+console.log(styles)
+
 function Navbar(props) {
-  const { img, links } = props;  
+  const { logo, links , logoText} = props;  
 
   return (
   <nav className={styles.navbar}>
-    <Image className={styles.navbarLogo}
-    src={"https:" + img.url} 
-    alt="logo impulsa" 
-    width={109.47}
-    height ={100}
-    />
+      <div className={styles.logoContent}>
+      <Image
+      src={`https:${logo.url}`}
+      alt="logo impulsa" 
+      width={55.83}
+      height ={53.24}
+      />
+      <Image
+      src={`https:${logoText.url}`}
+      alt="logo impulsa text" 
+      width={89.71}
+      height ={20.03}
+      />
+      </div>
+
+
     <div className={styles.linksWrapper}>
       {links.map((link) => {
         const text = link.fields.text;

@@ -2,15 +2,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
   width:100%;
 }
 
-.navbarLogo {
-  width: 109.47px;
-  height: 100px;
-  top: 14px;
-  left: 71px;  
+.logoContent{
+  display: flex;
+  flex-direction: column;
 }
 
 .linksWrapper {
@@ -40,28 +37,4 @@
   margin-right: 10px;
   align-content: center;
   filter:invert()
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center; /* Centra todos los elementos */
-  }
-
-  .navbarLogo {
-    margin-bottom: 20px; /* Espacio debajo del logo */
-    width: 60px;
-    height: auto;
-  }
-
-  .linksWrapper {
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
-  }
-
-  .linkCta {
-    width: 100%; /* Botones ocupan todo el ancho */
-    text-align: center;
-  }
 }

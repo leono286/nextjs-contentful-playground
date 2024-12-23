@@ -29,7 +29,8 @@ export default async function Home() {
   const resHeroSection= await getHomeHeroSection();
 
   const navBarLinks = resLinks.items[0].fields.linksArray
-  const navBarLogo = resLogo.items[0].fields.navBarLogo.fields.file
+  const navBarLogo = resLogo.items[1].fields.navBarLogo.fields.file
+  const navBarLogoText = resLogo.items[0].fields.navBarLogo.fields.file
 
   const slogan = resHeroSection.items[0].fields.contentArray[0].fields.slogan;
   const sloganDetail = resHeroSection.items[0].fields.contentArray[1].fields.slogan;
@@ -38,7 +39,7 @@ export default async function Home() {
 
   return (
     <div className={styles.page}>
-      <Navbar img={navBarLogo} links={navBarLinks} />
+      <Navbar logo={navBarLogo} logoText={navBarLogoText} links={navBarLinks} />
       {/* <HeroSection img={heroImg} slogan={slogan} sloganDetail={sloganDetail} link ={heroLink} /> */}
     </div>
   );
