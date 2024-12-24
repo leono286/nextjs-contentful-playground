@@ -14,7 +14,7 @@ function Navbar(props) {
 
   return (
   <nav className={`${styles.navbar} ${menuOpen ? styles.menuOpen : ''}`}>
-     <div className={`${menuOpen ? styles.openHamburguer : styles.logoContent}`}>
+     <div className={`${menuOpen ? styles.openHamburguer : styles.closeHamburguer}`}>
       <img className={styles.menuButton}
       src={`${menuOpen ? "/icons/close.png":"/icons/menu.png"}`}
       onClick={toggleMenu}

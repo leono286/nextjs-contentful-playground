@@ -57,6 +57,7 @@
 .contentCTAMobile {
   background-color: #e36414; 
   border-radius: 48px !important; 
+  align-items: center;
 }
 
 .corazon{
@@ -70,19 +71,25 @@
 
 @media (max-width: 768px) {
 
+
   .logoContent{
-    width: 100%;
+    width: fit-content;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .linksWrapper {
     display: none;
   }
-
+  .contentCTAMobile {
+    flex-shrink: 0;
+    flex-grow: 0;
+    align-self: center;
+  }
   .corazon{
     display: block;
+
   }
 
   .menuButton {
@@ -104,7 +111,13 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+
+  .closeHamburguer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 
 }
