@@ -71,12 +71,21 @@
 
 @media (max-width: 768px) {
 
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    background-color: #a87171;
+  }
 
   .logoContent{
-    width: fit-content;
-    display: flex;
+
     flex-direction: row;
     justify-content: space-between;
+    background-color: aquamarine;
+    max-width: 100%;
+    object-fit: contain;
   }
 
   .linksWrapper {
@@ -99,11 +108,9 @@
   .menuOpen {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 24px;
     flex-direction: column;
-    top: 70px;
-    background-color: white;
-    padding: 10px;
+    background-color: rgb(255, 255, 255);
     justify-content: space-between;
   }
 
@@ -112,10 +119,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+
   }
 
   .closeHamburguer {
     width: 100%;
+    height: 24px;
     display: flex;
     justify-content: space-between;
   }
