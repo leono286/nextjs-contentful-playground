@@ -11,6 +11,7 @@ function Navbar(props) {
     setMenuOpen(!menuOpen);
   };
 
+  const ctaLink = links.find(link => link.fields.isCta)?.fields.href || "#"
 
   return (
   <nav className={`${styles.navbar} ${menuOpen ? styles.menuOpen : ''}`}>
@@ -34,12 +35,12 @@ function Navbar(props) {
           />
         </div>
           {menuOpen ? "" : 
-          <div className={styles.contentCTAMobile}>
+          <a className={styles.contentCTAMobile} href={ctaLink}>
             <img className={styles.corazon}
                 src="/icons/favorite.png" 
                 alt="Corazon"
               />
-            </div>
+            </a>
         } 
       </div>
    
