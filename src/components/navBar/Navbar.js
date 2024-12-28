@@ -14,7 +14,7 @@ function Navbar(props) {
   const ctaLink = links.find(link => link.fields.isCta)?.fields.href || "#"
 
   return (
-  <nav className={`${styles.navbar} ${menuOpen ? styles.menuOpen : ''}`}>
+  <nav className={`${styles.navbar} ${menuOpen ? styles.menuOpen : styles.navbar}`}>
      <div className={`${menuOpen ? styles.openHamburguer : styles.closeHamburguer}`}>
       <img className={styles.menuButton}
       src={`${menuOpen ? "/icons/close.png":"/icons/menu.png"}`}
@@ -24,23 +24,25 @@ function Navbar(props) {
           <Image
           src={`https:${logo.url}`}
           alt="logo impulsa" 
-          width={55.83}
-          height ={53.24}
+          width={113}
+          height={32}
+          className={styles.logo}
           />
           <Image
           src={`https:${logoText.url}`}
           alt="logo impulsa text" 
-          width={89.71}
-          height ={20.03}
+          width={113}
+          height={32}
+          className={styles.logoText}
           />
         </div>
-          {menuOpen ? "" : 
-          <a className={styles.contentCTAMobile} href={ctaLink}>
-            <img className={styles.corazon}
-                src="/icons/favorite.png" 
-                alt="Corazon"
-              />
-            </a>
+        {menuOpen ? "" : 
+        <a className={styles.contentCTAMobile} href={ctaLink}>
+          <img className={styles.corazon}
+              src="/icons/favorite.png" 
+              alt="Corazon"
+            />
+        </a>
         } 
       </div>
    
