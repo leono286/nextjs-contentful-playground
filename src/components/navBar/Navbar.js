@@ -47,19 +47,30 @@ function Navbar(props) {
       </div>
    
     <div className={`${styles.linksWrapper} ${menuOpen ? styles.menuOpen : ''}`}>
-      {links.map((link) => {
+      {links.map((link, index) => {
         const text = link.fields.text;
         const href = link.fields.href;
         const isCta = link.fields.isCta;
-        return <a key={link.sys.id} className={isCta ? styles.linkCta : styles.linkNoCta} href={href}>
-           {isCta && (
-          <img 
-            src="/icons/favorite.png" 
-            alt="Corazon" 
-          />
-        )}
+        return <a 
+            key={link.sys.id} 
+            className={isCta 
+            ? styles.linkCta 
+            : styles.linkNoCta} 
+            href={href}>
+            {isCta && (
+            <img
+              src="/icons/favorite.png" 
+              alt="Corazon" 
+            />  
+          )}
           {text}
-          </a>
+          {(index === 1 || index === 2) && (
+          <img 
+          src="/icons/keyboard_arrow_down.png" 
+          alt="arrow_down" 
+          />
+          )}
+            </a>
       })}
     </div>
   </nav>

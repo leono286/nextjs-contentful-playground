@@ -33,8 +33,17 @@
 }
 
 .linkNoCta {
+  display: inline-flex;
   color: #0f4c5c;
 }
+
+.linkNoCta img {
+  width: 20px;
+  height: auto; 
+  margin-right: 10px;
+  align-content: center;
+}
+
 .linkNoCta:hover {
   color: #787878;
 }
