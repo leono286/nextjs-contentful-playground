@@ -1,7 +1,7 @@
 import { HeroSection } from "@/components/heroSection/HeroSection";
-import styles from "./page.module.css";
 import Navbar from "@/components/navBar/Navbar";
 import { createClient } from "contentful";
+import { MenuProvider } from "../contexts/MenuContext"
 
 const client = createClient({
   space: process.env.SPACE_ID,
@@ -38,9 +38,11 @@ export default async function Home() {
   const heroLink = resHeroSection.items[0].fields.contentArray[3].fields;
 
   return (
-    <div className={styles.page}>
-      <Navbar logo={navBarLogo} logoText={navBarLogoText} links={navBarLinks} />
-      {/* <HeroSection img={heroImg} slogan={slogan} sloganDetail={sloganDetail} link ={heroLink} />  */}
-    </div>
+    <>
+      <MenuProvider>
+        <Navbar logo={navBarLogo} logoText={navBarLogoText} links={navBarLinks} />
+        {/* <HeroSection img={heroImg} slogan={slogan} sloganDetail={sloganDetail} link ={heroLink} />  */}
+      </MenuProvider>
+    </>
   );
 }

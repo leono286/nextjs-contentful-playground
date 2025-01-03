@@ -1,11 +1,11 @@
 "use client";
 import styles from "./Navbar.module.css"
 import Image from "next/image";
-import { useState } from "react";
+import { useMenu } from "../../contexts/MenuContext"
 
 function Navbar(props) {
   const { logo, links , logoText} = props;  
-  const [menuOpen, setMenuOpen] = useState(false)
+  const {menuOpen, setMenuOpen} = useMenu(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -14,7 +14,7 @@ function Navbar(props) {
   const ctaLink = links.find(link => link.fields.isCta)?.fields.href || "#"
 
   return (
-  <nav className={`${styles.navbar} ${menuOpen ? styles.menuOpen : styles.navbar}`}>
+  <nav className={`${menuOpen ? styles.menuOpen : styles.navbar}`}>
      <div className={`${menuOpen ? styles.openHamburguer : styles.closeHamburguer}`}>
       <img className={styles.menuButton}
       src={`${menuOpen ? "/icons/close.png":"/icons/menu.png"}`}
@@ -36,17 +36,17 @@ function Navbar(props) {
           className={styles.logoText}
           />
         </div>
-        {menuOpen ? "" : 
+        {menuOpen ? null : 
         <a className={styles.contentCTAMobile} href={ctaLink}>
-          <img className={styles.corazon}
+          <img className={styles.heartIcon}
               src="/icons/favorite.png" 
-              alt="Corazon"
+              alt=""
             />
         </a>
         } 
       </div>
    
-    <div className={`${styles.linksWrapper} ${menuOpen ? styles.menuOpen : ''}`}>
+    <div className={` ${menuOpen ? styles.menuOpen : styles.linksWrapper}`}>
       {links.map((link, index) => {
         const text = link.fields.text;
         const href = link.fields.href;
