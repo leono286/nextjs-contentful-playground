@@ -1,21 +1,32 @@
 .navbar {
   display: flex;
-  flex-direction:column;
-  justify-content:flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: max-content;
   margin: 20px;
 }
 
-.logoContent{
+.logoContent {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  object-fit: cover;
+  height: 32px;
+  width: 113px;
 }
 
-.logo, .logoText{  
-  width: 100%;
+.logo{  
+  height: auto;
+  object-fit: fill;
 }
 
-.closeHamburguer {
+.logoText{  
+  height: auto;
+  object-fit: contain
+}
+
+.navbarIcons {
   width: auto;
   height: auto;
   display: flex;
@@ -23,18 +34,10 @@
   align-items: center;
 }
 
-.openHamburguer {
-  width: auto;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;  
-}
-
 .contentCTAMobile {
+  height: 32px;
+  width: 32px;
   border-radius: 48px;
-  padding: 10px;
   color: #ffff;
   background-color: #e36414;  
   display: inline-flex;
@@ -42,16 +45,21 @@
 }
 
 .heartIcon{
-  height:24px;
+  padding: 8px;
+  object-fit: contain;
   filter: invert(1) brightness(2);
 } 
 
-.linksWrapper {
-  display: none;
+.menuOpen {
+  display:flex;  
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
 }
 
-.linksWrapper a {
-  white-space: nowrap; 
+.linksWrapper{
+  display: none;
 }
 
 .linkNoCta {
@@ -86,13 +94,6 @@
   height: 24px;
 }
 
-.menuOpen {
-  display:flex;  
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: 20px;
-  background-color: #997878;
-}
 
 
 
@@ -176,9 +177,7 @@
   }
   
   .contentCTAMobile {
-    background-color: #e36414; 
-    border-radius: 48px !important; 
-    align-items: center;
+display: none;
   }
   
   .heartIcon{
