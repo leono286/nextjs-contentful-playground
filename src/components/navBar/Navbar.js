@@ -63,7 +63,7 @@ function Navbar(props) {
               alt="Corazon" 
             />  
           )}
-          {text}
+         <p>{text}</p>
           {(index === 1 || index === 2) && (
           <img 
           src="/icons/keyboard_arrow_down.png" 

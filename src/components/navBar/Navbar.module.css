@@ -53,8 +53,9 @@
 .menuOpen {
   display:flex;  
   flex-direction: column;
-  justify-content: space-around;
+  justify-content:baseline;
   align-items: center;
+  margin: 25px;
   height: 100vh;
 }
 
@@ -65,12 +66,16 @@
 .linkNoCta {
   display: inline-flex;
   color: #0f4c5c;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+
 }
 
 .linkNoCta img {
   width: 20px;
   height: auto; 
-  margin-right: 10px;
   align-content: center;
 }
 
@@ -79,14 +84,19 @@
 }
 
 .linkCta {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
   border-radius: 48px;
   color: #ffff;
   background-color: #e36414;  
+  height: 42px;
 }
 
 .linkCta img {
-  height: 24px; 
-  align-content: center;
+  height: 24px;
+  align-self: center;
   filter:invert()
 }
 .menuButton {
@@ -96,17 +106,12 @@
 
 
 
-
-
-@media(min-width: 600px) {
-
-}
-
 @media(min-width: 768px) {
   .navbar {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
     justify-content: space-between;
-    align-items: center;
-    width:100%;
     background-color: #ffff;
   }
   
