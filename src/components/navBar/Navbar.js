@@ -24,8 +24,8 @@ function Navbar(props) {
           <Image
           src={`https:${logo.url}`}
           alt="logo impulsa" 
-          width={33}
-          height={32}
+          width={60}
+          height={60}
           className={styles.logo}
           />
           <Image

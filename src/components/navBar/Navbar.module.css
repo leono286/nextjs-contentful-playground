@@ -57,6 +57,9 @@
   align-items: center;
   margin: 25px;
   height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  gap: 15px;
 }
 
 .linksWrapper{
@@ -69,7 +72,6 @@
   font-family: 'Open Sans';
   font-size: 16px;
   font-weight: 700;
-  margin-bottom: 10px;
 
 }
 
@@ -92,6 +94,7 @@
   color: #ffff;
   background-color: #e36414;  
   height: 42px;
+  gap: 2px;
 }
 
 .linkCta img {
@@ -105,80 +108,36 @@
 }
 
 
-
-@media(min-width: 768px) {
+@media(min-width: 600px) {
   .navbar {
-    display: flex;
     flex-direction: row;
     align-self: center;
     justify-content: space-between;
-    background-color: #ffff;
   }
   
   .logoContent{
     width: 110px;
     height: 100px;
-    display: flex;
     flex-direction: column;
-    align-items: center;
   }
-  
-  .logo, .logoText{
-  
-    width: 100%;
-    height: auto;
-  
-  }
-  
+   
   
   .linksWrapper {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
+    font-family: 'Open Sans', sans-serif;
   }
   
   .linksWrapper a {
     white-space: nowrap; 
+    gap: 8px;
+    align-items: center;
   }
-  
-  .linkNoCta {
-    display: inline-flex;
-    color: #0f4c5c;
-  }
-  
-  .linkNoCta img {
-    width: 20px;
-    height: auto; 
-    margin-right: 10px;
-    align-content: center;
-  }
-  
-  .linkNoCta:hover {
-    color: #787878;
-  }
-  
-  .linkCta {
-    border-radius: 48px;
-    padding: 13px 16px;
-    color: #ffff;
-    background-color: #e36414;  
-    display: inline-flex;
-    margin-right: 3%;
-  }
-  
-  .linkCta img {
-    width: 20px;
-    height: auto; 
-    margin-right: 10px;
-    align-content: center;
-    filter:invert()
-  }
-  
+       
   .menuButton{
     display: none;
-    background: transparent;
-    border: none;
-    font-size: 30px;
   }
   
   .contentCTAMobile {
@@ -187,11 +146,14 @@ display: none;
   
   .heartIcon{
     display: none;
-    padding: 5px;
-    width: 32px;
-    height: 32px;
-    filter: invert(1) brightness(2);
   
+  }
+
+}
+
+@media(min-width: 768px) {
+  .linksWrapper {
+    flex-direction: row;
   }
 }
 
