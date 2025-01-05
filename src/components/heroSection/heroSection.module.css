@@ -1,50 +1,75 @@
-.heroSection {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden; 
+.hideSection {
+    display: none;
 }
 
-.heroImg {
-    width: 1439px; 
-    height: 100%; 
-    object-fit: cover; 
+.heroImg{
+    display: none;
+
+}
+
+.heroSection {
+    position: relative;
+    height: 640px;
+}
+
+.heroImgMobile {
     position: absolute;
-    z-index: 1;
+    object-fit:fill;
+    width: 100%;
+    border-radius:0 0 60px 0;
+    z-index: -1;
+}
+
+.heroContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 269px;
+    height: 310px;
+    color: #ffff;
+    top: 245px;
+    left: 25px;
+    
 }
 
 .slogan {
-    position: absolute;
-    z-index: 2;
-    font-family: 'Zilla Slab', serif;
-    font-weight: 700;
-    font-size:  54px;
-    line-height: 55px ;
-    width: 511px;
-    height: 152px;
-    top: 115px;
-    left: 84px;
-    color: #fff;
+    font-family: 'Zilla Slab';
+    font-weight: bold;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8)
 }
 
 .sloganDetail {
-    position: absolute;
-    z-index: 2;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-size:  20px;
-    line-height: 30px ;
-    width: 405px;
-    height: 85px;
-    top: 303px;
-    left: 84px;
-    color: #fff;
 }
 
-.heroSection a {
-    position: absolute;
-    z-index: 2;
-    border-radius: 48px;
-    color: #0f4c5c;
-    padding: 13px 16px
-  }
+
+@media(min-width: 600px) {
+    .heroImgMobile{
+        display: none;
+        
+    }
+    .heroSection { 
+        height: max-content;
+    }
+    .heroImg{
+        display: block;
+        object-fit: fill;
+    }
+    .heroContent{
+        width: 511px;
+        height: 310px;
+        color: #ffff;
+        top: 115px;
+        left: 84px;
+        
+    }
+    .slogan {
+        font-size: 54px;
+    }
+    .sloganDetail {
+        font-size: 20px;
+    }
+}
+

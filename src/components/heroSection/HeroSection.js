@@ -1,25 +1,40 @@
+"use client"
 import styles from "./heroSection.module.css"
 import Image from "next/image"
+import { useMenu } from "../../contexts/MenuContext"
 
 export const HeroSection = (props) => { 
-    const {img, slogan, sloganDetail, link} = props
+    const {img, imgMobile, slogan, sloganDetail, link} = props
     const text = link.text;
     const href = link.href;
     const isCta = link.isCta;
 
-    console.log(link)
+    const {menuOpen, setMenuOpen} = useMenu(false)
+
 
   return (
-    <div className={styles.heroSection}>      
-        <Image className={styles.heroImg}
-        src={"https:" + img.url}
-        alt="Hero Section"
-        width={1439}
-        height ={570}
-        />
-        <h1 className={styles.slogan}>{slogan}</h1>
-        <h5 className={styles.sloganDetail}>{sloganDetail}</h5>
-        <a href={href}>{text}</a>
+    <div className={`${menuOpen ? styles.hideSection:styles.heroSection}`}>  
+
+          <Image 
+          src={"https:" + imgMobile.url}
+          alt="Imagen adaptativa a movil"
+          width={360}
+          height ={584}
+          className={styles.heroImgMobile}
+          />
+          <Image 
+          src={"https:" + img.url}
+          alt=""
+          width={1439}
+          height ={570}
+          className={styles.heroImg}
+          />
+
+        <div className={styles.heroContent}>
+          <p className={styles.slogan}>{slogan}</p>
+          <p className={styles.sloganDetail}>{sloganDetail}</p>
+          <a href={href}>{text}</a> 
+        </div>
     </div>
   )
 }

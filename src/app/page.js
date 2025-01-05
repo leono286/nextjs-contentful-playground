@@ -35,13 +35,15 @@ export default async function Home() {
   const slogan = resHeroSection.items[0].fields.contentArray[0].fields.slogan;
   const sloganDetail = resHeroSection.items[0].fields.contentArray[1].fields.slogan;
   const heroImg = resHeroSection.items[0].fields.contentArray[2].fields.heroImg.fields.file;
+  const heroImgMobile = resHeroSection.items[0].fields.contentArray[4].fields.heroImg.fields.file;
   const heroLink = resHeroSection.items[0].fields.contentArray[3].fields;
+
 
   return (
     <>
       <MenuProvider>
-        <Navbar logo={navBarLogo} logoText={navBarLogoText} links={navBarLinks} />
-        {/* <HeroSection img={heroImg} slogan={slogan} sloganDetail={sloganDetail} link ={heroLink} />  */}
+        <Navbar logo={navBarLogo} logoText={navBarLogoText} links={navBarLinks} /> 
+        <HeroSection img={heroImg} imgMobile={heroImgMobile} slogan={slogan} sloganDetail={sloganDetail} link ={heroLink} />
       </MenuProvider>
     </>
   );
