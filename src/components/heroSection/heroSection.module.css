@@ -28,11 +28,11 @@
 .heroSection::after {
     content: ""; /* Necesario para que el pseudo-elemento exista */
     position: absolute;
-    top: 30%;
+    top: 0%;
     left: 0;
     width: 100%; 
     height: 100%; 
-    background: linear-gradient(180deg, rgba(15, 76, 92, 0) 6.51%, #0F4C5C 85%);
+    background: linear-gradient(180deg, rgba(15, 76, 92, 0) 6.51%, #0f4d5c86 85%);
     background-blend-mode: multiply;    
     z-index: 0; /* Asegura que el gradiente se aplica sobre la imagen pero debajo del contenido */
     
@@ -122,12 +122,25 @@
         overflow: hidden;
         border-radius: 0 0 170px 0;
     }
-    
+
+    .heroSection::after {
+
+        background: 
+        linear-gradient(180deg, rgba(15, 76, 92, 0) 6.51%, #0f4d5c86 85%),
+        linear-gradient(90deg, rgba(15, 77, 92, 0.466) 0%,  99.53%);
+        background-blend-mode: multiply multiply;
+        background-position: top, 30% top;
+        background-size: 100% 100%, 100% 30%;
+        
+    }
+      
     .heroImg{
         display: block;
         width: 100%;
         object-fit: cover;
     }
+
+
     .heroContent{
         justify-content: space-around;
         width: 511px;
@@ -136,12 +149,14 @@
         top: 115px;
         left: 84px;     
     }
+
+    
     .slogan {
         width: fit-content;
-        font-size: 54px;
+        font-size: 54px;        
     }
     .sloganDetail {
-        width: fit-content;
+        width: 405px;
         font-size: 20px;
     }
 }
