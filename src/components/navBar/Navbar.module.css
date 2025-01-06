@@ -70,10 +70,14 @@
 .linkNoCta {
   display: inline-flex;
   color: #0f4c5c;
-  font-family: 'Open Sans';
+  font-weight: 700;
+  font-family:sans-serif;
   font-size: 16px;
   font-weight: 700;
-
+  line-height: 21.79px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
 }
 
 .linkNoCta img {
@@ -121,14 +125,14 @@
     height: 100px;
     flex-direction: column;
   }
-   
+
   
   .linksWrapper {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: center;
     gap: 20px;
-    font-family: 'Open Sans', sans-serif;
+
   }
   
   .linksWrapper a {
@@ -136,7 +140,14 @@
     gap: 8px;
     align-items: center;
   }
-       
+  
+  .linkNoCta {
+
+    font-weight: 400;
+
+  }
+
+
   .menuButton{
     display: none;
   }
