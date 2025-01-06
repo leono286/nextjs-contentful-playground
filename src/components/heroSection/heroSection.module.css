@@ -1,3 +1,4 @@
+
 .hideSection {
     display: none;
 }
@@ -9,15 +10,32 @@
 
 .heroSection {
     position: relative;
-    height: 640px;
+    height: 584px;
+    border-radius: 0 0 60px 0;
+    overflow: hidden; /* Asegura que ::after no sobresalga del contenedor */
 }
 
 .heroImgMobile {
     position: absolute;
-    object-fit:fill;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-radius:0 0 60px 0;
-    z-index: -1;
+    height: 100%; 
+    object-fit: cover; /* La imagen se ajusta sin deformarse */
+    z-index: -1; /* La imagen queda detrás del contenido */
+}
+
+.heroSection::after {
+    content: ""; /* Necesario para que el pseudo-elemento exista */
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background: linear-gradient(180deg, rgba(15, 76, 92, 0) 6.51%, #0F4C5C 85%);
+    background-blend-mode: multiply;    
+    z-index: 0; /* Asegura que el gradiente se aplica sobre la imagen pero debajo del contenido */
+    
 }
 
 .heroContent{
@@ -29,46 +47,101 @@
     height: 310px;
     color: #ffff;
     top: 245px;
-    left: 25px;
-    
+    left: 25px;  
+    z-index: 1;  
 }
 
 .slogan {
-    font-family: 'Zilla Slab';
-    font-weight: bold;
+    width: 310px;
+    height: 112px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: 'Museo Slab';
     font-size: 36px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8)
+    font-weight: 700;
+    line-height: 40px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    text-shadow: 0px 8px 8px 0px #00000066;
+
+    
 }
 
 .sloganDetail {
+    width: 310px;
+    height: 67px;
+    gap: 0px;
+    opacity: 0px;
     font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
 }
 
+.heroContent a {
+    display: flex;
+    width: 149px;
+    height: 42px;
+    padding: 13px 16px 13px 16px;
+    border-radius: 24px;
+    border: 1px;
+    opacity: 0px;
+    border: 1px solid #FFFFFF;
+    white-space: nowrap; 
+    align-items: center;
+    gap: 10px;    
+    font-family:sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.heroContent img {
+    height: 16px;
+    align-self: center;
+    filter:invert()
+}
 
 @media(min-width: 600px) {
     .heroImgMobile{
         display: none;
         
     }
+
     .heroSection { 
         height: max-content;
+        overflow: hidden;
+        border-radius: 0 0 170px 0;
     }
+    
     .heroImg{
         display: block;
-        object-fit: fill;
+        width: 100%;
+        object-fit: cover;
     }
     .heroContent{
+        justify-content: space-around;
         width: 511px;
-        height: 310px;
+        height: 410px;
         color: #ffff;
         top: 115px;
-        left: 84px;
-        
+        left: 84px;     
     }
     .slogan {
+        width: fit-content;
         font-size: 54px;
     }
     .sloganDetail {
+        width: fit-content;
         font-size: 20px;
     }
 }

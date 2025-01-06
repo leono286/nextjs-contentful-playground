@@ -18,22 +18,27 @@ export const HeroSection = (props) => {
           <Image 
           src={"https:" + imgMobile.url}
           alt="Imagen adaptativa a movil"
-          width={360}
+          width={600}
           height ={584}
           className={styles.heroImgMobile}
           />
           <Image 
           src={"https:" + img.url}
           alt=""
-          width={1439}
-          height ={570}
+          width={1500}
+          height ={640}
           className={styles.heroImg}
           />
-
         <div className={styles.heroContent}>
           <p className={styles.slogan}>{slogan}</p>
           <p className={styles.sloganDetail}>{sloganDetail}</p>
-          <a href={href}>{text}</a> 
+          <a href={href}>
+            {text}
+            <img           
+            src="\icons\arrow_diagonal.png" 
+            alt="arrow_diagonal" 
+            />
+            </a> 
         </div>
     </div>
   )

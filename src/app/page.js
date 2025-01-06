@@ -3,6 +3,7 @@ import Navbar from "@/components/navBar/Navbar";
 import { createClient } from "contentful";
 import { MenuProvider } from "../contexts/MenuContext"
 
+
 const client = createClient({
   space: process.env.SPACE_ID,
   accessToken: process.env.ACCESS_TOKEN,

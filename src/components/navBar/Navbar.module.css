@@ -166,6 +166,7 @@ display: none;
 @media(min-width: 768px) {
   .linksWrapper {
     flex-direction: row;
+    align-items: center;
   }
 }
 
