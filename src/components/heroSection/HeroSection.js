@@ -3,11 +3,16 @@ import styles from "./heroSection.module.css"
 import Image from "next/image"
 import { useMenu } from "../../contexts/MenuContext"
 
-export const HeroSection = (props) => { 
-    const {img, imgMobile, slogan, sloganDetail, link} = props
+export const HeroSection = ({items}) => { 
+
+    const slogan = items[0].fields.slogan;
+    const sloganDetail = items[1].fields.slogan;
+    const img = items[2].fields.heroImg.fields.file;
+    const imgMobile = items[4].fields.heroImg.fields.file;
+    const link = items[3].fields;
+
     const text = link.text;
     const href = link.href;
-    const isCta = link.isCta;
 
     const {menuOpen, setMenuOpen} = useMenu(false)
 

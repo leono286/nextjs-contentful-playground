@@ -3,7 +3,6 @@ import Navbar from "@/components/navBar/Navbar";
 import { createClient } from "contentful";
 import { MenuProvider } from "../contexts/MenuContext"
 
-
 const client = createClient({
   space: process.env.SPACE_ID,
   accessToken: process.env.ACCESS_TOKEN,
@@ -33,18 +32,14 @@ export default async function Home() {
   const navBarLogo = resLogo.items[1].fields.navBarLogo.fields.file
   const navBarLogoText = resLogo.items[0].fields.navBarLogo.fields.file
 
-  const slogan = resHeroSection.items[0].fields.contentArray[0].fields.slogan;
-  const sloganDetail = resHeroSection.items[0].fields.contentArray[1].fields.slogan;
-  const heroImg = resHeroSection.items[0].fields.contentArray[2].fields.heroImg.fields.file;
-  const heroImgMobile = resHeroSection.items[0].fields.contentArray[4].fields.heroImg.fields.file;
-  const heroLink = resHeroSection.items[0].fields.contentArray[3].fields;
+  const heroSectionItems = resHeroSection.items[0].fields.contentArray
 
 
   return (
     <>
       <MenuProvider>
         <Navbar logo={navBarLogo} logoText={navBarLogoText} links={navBarLinks} /> 
-        <HeroSection img={heroImg} imgMobile={heroImgMobile} slogan={slogan} sloganDetail={sloganDetail} link ={heroLink} />
+        <HeroSection items={heroSectionItems}/>
       </MenuProvider>
     </>
   );
