@@ -1,0 +1,150 @@
+.hideSection {
+    display: none;
+}
+
+.whatIsSection {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFEBD64D;
+    width: Hug (360px)px;
+    height: Hug (914px)px;
+    top: 641px;
+    padding: 60px 0px 30px 24px;
+    gap: 60px;
+    opacity: 0px;
+
+}
+
+.textContent{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: Hug (312px)px;
+    height: Hug (427px)px;
+    opacity: 0px;
+    font-family: system-ui, -apple-system,  'Open Sans';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+.textContentTitle{
+    font-family:system-ui, -apple-system,  'Open Sans';
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+}
+
+.button {
+    color: #0F4C5C;
+    display: flex;
+    justify-content: space-around;
+    width: 149px;
+    height: 42px;
+    padding: 13px 16px 13px 16px;
+    border-radius: 24px;
+    border: 1px;
+    opacity: 0px;
+    border: 1px solid #0F4C5C;
+    white-space: nowrap; 
+    align-items: center;
+    gap: 10px;    
+    font-family:sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+.button img {
+    height: 16px;
+    align-self:flex-end;
+}
+
+.imgCarousel{
+    gap: 20px;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+  }
+  
+  .carouselWrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.5s ease-in-out;
+    overflow-x: auto; /* Para dispositivos móviles */
+  }
+  
+  .carouselItem {
+    flex-shrink: 0;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  
+  .carouselItem.active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .carouselWrapper::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en móviles */
+  }
+  
+  .prevButton,
+  .nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    font-size: 1.5rem;
+    display: block; /* Visible en desktop */
+  }
+  
+  .prevButton {
+    left: 10px;
+  }
+  
+  .nextButton {
+    right: 10px;
+  }
+  
+  .prevButton:hover,
+  .nextButton:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Mobile-first: Ocultar botones en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .prevButton,
+    .nextButton {
+      display: none;
+    }
+  
+    .carouselItem {
+      opacity: 0.7;
+      transform: scale(0.9);
+    }
+  }
+  
