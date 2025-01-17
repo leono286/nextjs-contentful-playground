@@ -41,16 +41,17 @@ export const WhatIsSection = ({ items }) => {
 
   return (
     <div className={`${menuOpen ? styles.hideSection : styles.whatIsSection}`}>
-      <div className={styles.textContent}>
-        <p className={styles.textContentTitle}>{title}</p>
-        <p>{text1}</p>
-        <p>{text2}</p>
+      <div className={styles.whatIsContent}>
+        <div className={styles.textContent}>
+          <p className={styles.textContentTitle}>{title}</p>
+          <p>{text1}</p>
+          <p>{text2}</p>
+        </div>
+        <a href={link} className={styles.button}>
+          {textLink}
+          <img src="/icons/arrow_diagonal.png" alt="arrow_diagonal" />
+        </a>
       </div>
-      <a href={link} className={styles.button}>
-        {textLink}
-        <img src="/icons/arrow_diagonal.png" alt="arrow_diagonal" />
-      </a>
-
       <div className={styles.carousel}>
 
           <>

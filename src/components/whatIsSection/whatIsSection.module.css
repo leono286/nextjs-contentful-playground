@@ -14,7 +14,11 @@
     opacity: 0px;
 
 }
-
+.whatIsContent{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
 .textContent{
     color: black;
     display: flex;
@@ -117,6 +121,25 @@
 
   /* Mobile-first: Ocultar botones en pantallas pequeñas */
   @media (min-width: 600px) {
+    .whatIsSection{
+      flex-direction: row;
+    }
+
+    .whatIsContent{
+      width: 40%;
+    }
+
+    .textContent{
+      font-size: 16px;
+    }
+
+    .textContentTitle{
+    font-size: 30px;
+    }
+
+    .carousel{
+      width: 60%;
+    }
 
     .carouselWrapper {
       justify-content: space-around;
@@ -126,24 +149,27 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 48px;
+      background: rgba(227, 100, 20, 1);
       color: white;
-      border: none;
       cursor: pointer;
       padding: 10px;
       z-index: 10;
       font-size: 1.5rem;
-      display: block; /* Visible en desktop */
+      display: block; /* Visible en desktop */    
+      width: 48px;
+      height: 48px;
+
     }
 
     .prevButton {
       left: 10px;
     }
 
-    .prevButton:hover,
+     .prevButton:hover,
     .nextButton:hover {
       background-color: rgba(0, 0, 0, 0.8);
-    }
+    } 
   
     .nextButton {
       right: 10px;
