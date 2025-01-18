@@ -44,9 +44,9 @@ export default async function Home() {
   return (
     <>
       <MenuProvider>
-        <Navbar logo={navBarLogo} logoText={navBarLogoText} links={navBarLinks} /> 
-        <HeroSection items={heroSectionItems}/>
-        <WhatIsSection items={whatIsSectionItems}/>S
+         {/* <Navbar logo={navBarLogo} logoText={navBarLogoText} links={navBarLinks} /> 
+        <HeroSection items={heroSectionItems}/>  */}
+        <WhatIsSection items={whatIsSectionItems}/>
       </MenuProvider>
     </>
   );
